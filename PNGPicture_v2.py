@@ -101,7 +101,7 @@ def perform(level, box, options):
 	for x in xrange(0, width): # hack
 		y = height # hack
 		while y > 0: # hack
-			colour = getPixel(pixels, x, height-y) # hack
+			colour = getPixel(pixels, width-x-1, height-y) # hack
 			if not transparent(colour):
 				(mat, dat) = closestMaterial(colour)
 				if horizontal == True:
